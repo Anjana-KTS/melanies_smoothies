@@ -39,9 +39,9 @@ if(ingredients_list):
         sf_df=st.dataframe(data=smoothiefroot_response.json(),use_container_width=True)
     st.write(ingredients_string)
     my_insert_stmt = """ insert into smoothies.public.orders(ingredients,name_on_smoothie)
-            values ('""" + ingredients_string +"""','"""+Name_on_Smoothie+"""')"""
+            values ('""" + ingredients_string +"""','"""+name_on_order+"""')"""
     time_to_insert=st.button('Submit Order')
     if time_to_insert:
         session.sql(my_insert_stmt).collect()
-        st.success('Your Smoothie is ordered, '+Name_on_Smoothie+'!', icon="✅")
+        st.success('Your Smoothie is ordered, '+name_on_order+'!', icon="✅")
 
