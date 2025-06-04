@@ -8,8 +8,8 @@ st.title(f":cup_with_straw: Customise Your Smoothie! :cup_with_straw: ")
 st.write(
   """Choose the fruits you want in your custom Smoothie!"""
 )
-Name_on_Smoothie = st.text_input('Name on Smoothie: ')
-st.write('The name on your Smoothie will be: ', Name_on_Smoothie)
+name_on_order = st.text_input('Name on Smoothie: ')
+st.write('The name on your Smoothie will be: ', name_on_order)
 
 cnx=st.connection("snowflake",type="snowflake")
 session=cnx.session()
